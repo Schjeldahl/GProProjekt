@@ -1,0 +1,6 @@
+#BlueJ class context
+#Thu Nov 12 14:25:14 CET 2026
+comment0.target=Person
+comment1.params=w
+comment1.target=void act(itumulator.world.World)
+numComments=2
