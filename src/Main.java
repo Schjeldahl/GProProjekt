@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Random;
 import java.awt.Color;
 
 import itumulator.executable.DisplayInformation;
@@ -22,15 +22,8 @@ public class Main {
         Person person = new Person();
     
         Location place = new Location (r.nextInt(size),r.nextInt(size));
-    
-        List<Person> ps = new ArrayList<>();
-        
-        for (int i = 0 ; i<=10 ; i++){
-            ps.add(person);
-        }
-        
-        for (Person k : ps){
-            w.setTile(place, k);}
+
+        w.setTile(place, person);
         
         DisplayInformation di = new DisplayInformation(Color.red);
         p.setDisplayInformation(Person.class, di);
@@ -38,9 +31,9 @@ public class Main {
         p.show();
         for (int i = 0; i<200 ; i++) {
             p.simulate();
-                if (w.isNight() && w.contains(person)){
-                    w.delete(person);
-                    }
+            if (w.isNight() && w.contains(person)) {
+                w.delete(person);
+            }
         }
     }
 
